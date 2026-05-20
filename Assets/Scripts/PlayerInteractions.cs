@@ -24,6 +24,7 @@ public class PlayerInteractions : NetworkBehaviour
         if(Input.GetButtonDown("Fire2"))
         {
             Runner.Spawn(_minion, transform.position + transform.forward * 2, Quaternion.identity, Runner.LocalPlayer);
+            //Runner.Despawn(Object);
         }
     }
     private void ColorChanged()
