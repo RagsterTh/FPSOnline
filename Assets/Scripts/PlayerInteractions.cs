@@ -23,7 +23,7 @@ public class PlayerInteractions : NetworkBehaviour
         }
         if(Input.GetButtonDown("Fire2"))
         {
-            Runner.Spawn(_minion, transform.position + transform.forward * 2, Quaternion.identity, Runner.LocalPlayer);
+            Runner.Spawn(_minion, transform.position + new Vector3(0, 0.5f, 0) + (transform.forward * 2), Quaternion.identity, Runner.LocalPlayer);
             //Runner.Despawn(Object);
         }
     }
