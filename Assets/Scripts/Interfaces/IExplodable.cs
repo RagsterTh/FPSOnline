@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IExplodable
 {
-    void ExplodeRPC();
+    void ExplodeRPC(int damage);
 }

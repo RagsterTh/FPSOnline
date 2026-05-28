@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class DamageArea : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    [SerializeField]private int damage = 5;
+    private void OnTriggerEnter(Collider collision)
     {
-        if (!collision.gameObject.TryGetComponent(out IExplodable target))
+        IExplodable target = collision.GetComponentInParent<IExplodable>();
+        if (target == null)
             return;
-        target.ExplodeRPC();
+        target.ExplodeRPC(damage);
     }
 }

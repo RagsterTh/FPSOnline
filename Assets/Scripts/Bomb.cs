@@ -9,7 +9,7 @@ public class Bomb : NetworkBehaviour, IExplodable
     [Networked] 
     private float timer { get; set; }//Tempo que carrega
 
-    public void ExplodeRPC()
+    public void ExplodeRPC(int damage)
     {
         Explode();
     }
